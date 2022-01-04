@@ -16,14 +16,14 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 user = api.me()
 
-search = 'happy new year'
+search = 'masterofmachines'
 nrweets = 500
 
 for tweet in tweepy.Cursor(api.search, search).items(nrweets):
     try:
         print('Tweet Retweeted')
         tweet.retweet()
-        time.sleep(4500)
+        time.sleep(45000)
     except tweepy.TweepError as e:
         print(e.reason)
     except StopIteration:
