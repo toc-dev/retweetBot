@@ -23,7 +23,7 @@ for tweet in tweepy.Cursor(api.search, search).items(nrweets):
     try:
         print('Tweet Retweeted')
         tweet.retweet()
-        time.sleep(450)
+        time.sleep(450000)
     except tweepy.TweepError as e:
         print(e.reason)
     except StopIteration:
